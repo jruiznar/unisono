@@ -1,0 +1,261 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: Inter;
+}
+
+.datos {
+    display: flex;
+    gap: 30px;
+    padding: 20px 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background: rgba(255, 213, 177, 0.6);
+    margin-left: 10px;
+    width: calc(100% - 10px);
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.foto-contenedor {
+    position: relative;
+    width: 178px;
+    height: 145px;
+    cursor: pointer;
+}
+
+.foto-modificar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    opacity: 0.9;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cambiar-foto-texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+/* Botones */
+.boton-editar,
+.instrumento-biografia button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: normal;
+    height: 27px;
+}
+
+.boton-editar {
+    width: 127px;
+}
+
+.instrumento-biografia button {
+    width: 217px;
+}
+
+.instrumento-actual {
+    color: #000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.instrumento-biografia {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+.biografia {
+    display: inline-flex;
+    padding: 0px 0px 45px 18px;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 12px;
+    background: #F7E9DE;
+}
+
+.biografia:focus::placeholder {
+    color: transparent;
+}
+
+.tecnicas {
+    width: 675px;
+    height: 219px;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tecnicas h3 {
+    display: flex;
+    width: 122px;
+    height: 32px;
+    justify-content: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #000;
+    font-size: 22px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.etiqueta {
+    display: flex;
+    width: 268px;
+    height: 48px;
+    padding: 0px 16px 0px 4px;
+    align-items: center;
+    gap: 276px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #FFF;
+}
+
+.etiqueta.btn-anadir,
+.etiqueta.btn-ver-mas {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    user-select: auto;
+}
+
+.etiqueta.btn-anadir:hover,
+.etiqueta.btn-ver-mas:hover {
+    background-color: #1976D2;
+}
+
+.publicaciones {
+    width: 647px;
+    height: 428px;
+    flex-shrink: 0;
+}
+
+.grid-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.video-miniatura {
+    width: 199px;
+    height: 133px;
+    aspect-ratio: 199 / 133;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat, url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.video-miniatura video {
+    width: 199px;
+    height: 133px;
+    aspect-ratio: 199 / 133;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat, url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.video-miniatura.subir-video {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icono-subir {
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal.oculto {
+    display: none;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.modal-contenido h3 {
+    margin-top: 0;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-contenido textarea {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    padding: 10px;
+    resize: vertical;
+}
+
+.modal-contenido button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página de Registro</title>
+  <link rel="stylesheet" href="css/stylesregistro.css" />
+</head>
+<body>
+
+<div class="container">
+  <!-- Sección izquierda -->
+  <div class="left-section">
+    <img class="login-banner" src="./iconos/unisono.png" alt="Banner" />
+    <div class="text">
+      Crea un perfil, añade un instrumento y no dejes de mejorar y conocer más músicos como tú. Sobre todo, no olvides disfrutar del proceso.
+    </div>
+    <div class="img-containerleft">
+      <img class="img-left" src="./iconos/image 1.png" alt="Imagen izquierda" />
+    </div>
+    <div class="img-containerright">
+      <img class="img-right" src="./iconos/image 2.png" alt="Imagen derecha" />
+    </div>
+  </div>
+
+  <!-- Sección derecha -->
+  <div class="right-section">
+    <div class="form-container">
+      <h2>Rellene el formulario para registrarse</h2>
+
+      <form method="POST" action="registro.php" enctype="multipart/form-data">
+        <div class="form-grid">
+          <div>
+            <input type="text" name="nombre" class="input-field" placeholder="Nombre" required>
+            <input type="text" name="nombre_usuario" class="input-field" placeholder="Nombre de usuario" required>
+            <input type="password" name="contraseña" class="input-field" placeholder="Contraseña" required>
+            <input type="number" name="edad" class="input-field" placeholder="Edad" required>
+            <label for="foto_perfil" class="input-field">Foto de perfil (opcional):</label>
+            <input type="file" name="foto_perfil" accept="image/*" class="input-field">
+            <input type="text" name="nivel" class="input-field" placeholder="Nivel (principiante, intermedio, etc.)" required>
+          </div>
+          <div>
+            <input type="text" name="apellidos" class="input-field" placeholder="Apellidos" required>
+            <input type="password" name="repite_contraseña" class="input-field" placeholder="Repite contraseña" required>
+            <input type="text" name="localidad" class="input-field" placeholder="Localidad" required>
+
+            <label for="instrumento" class="input-field">Elige instrumento:</label>
+            <select id="instrumento" name="instrumento" class="input-field" required>
+              <option value="guitarra">Guitarra</option>
+              <option value="piano">Piano</option>
+              <option value="bajo">Bajo</option>
+              <option value="bateria">Batería</option>
+            </select>
+
+            <div class="input-field">
+              <label for="gustos">Gustos musicales:</label><br>
+              <label><input type="checkbox" name="gustos[]" value="rock"> Rock</label><br>
+              <label><input type="checkbox" name="gustos[]" value="pop"> Pop</label><br>
+              <label><input type="checkbox" name="gustos[]" value="jazz"> Jazz</label><br>
+              <label><input type="checkbox" name="gustos[]" value="clásica"> Clásica</label><br>
+              <label><input type="checkbox" name="gustos[]" value="reggaeton"> Reggaeton</label><br>
+              <label><input type="checkbox" name="gustos[]" value="electrónica"> Electrónica</label><br>
+              <label><input type="checkbox" name="gustos[]" value="hiphop"> Hip Hop</label><br>
+              <label><input type="checkbox" name="gustos[]" value="flamenco"> Flamenco</label><br>
+              <label><input type="checkbox" name="gustos[]" value="salsa"> Salsa</label><br>
+              <label><input type="checkbox" name="gustos[]" value="reggae"> Reggae</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Registrarme</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
