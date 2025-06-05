@@ -1,0 +1,440 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: Inter;
+}
+
+.datosPerfil {
+    display: flex;
+    gap: 5px;
+    padding: 20px 25px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background: #ffebd9;
+    margin-left: 10px;
+    width: calc(100% - 10px);
+    height: auto;
+    flex-shrink: 0;
+    margin-top: 0px;
+}
+.modificar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+/*FOTO*/
+.foto-contenedor {
+    position: relative;
+    width: 178px;
+    height: 145px;
+    cursor: pointer;
+}
+.foto-contenedor#img{
+    position: relative;
+    width: 178px;
+    height: 145px;
+    opacity: 0,1; 
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+    opacity: 1; 
+    
+}
+.foto-modificar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+ filter: grayscale(60%) brightness(90%) saturate(60%);
+    opacity: 0.6; 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cambiar-foto-texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    background: none; 
+    border-radius: 6px;
+    pointer-events: none;
+}
+/* Botones */
+.boton-editar{
+        display: flex;
+
+}
+
+
+.instrumento-biografia button {
+    margin-top: 20px;
+    display: flex;
+    width: 245px;
+    height: 46px;
+    padding: 0px 16px 0px 4px;
+    align-items: center;
+    gap: 276px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #65558F;
+    border: none;
+    align-content: center;
+    cursor: pointer;
+}
+#texto-instrumento{
+    display: flex;
+width: auto;
+text-align: justify;
+height: 27px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #FFF;
+font-family: Inter;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    /* cursor: pointer; */
+
+}
+.boton-editar {
+    display: flex;
+width: 167px;
+height: 22px;
+padding: 0px 16px 0px 4px;
+align-items: center;
+gap: 276px;
+flex-shrink: 0;
+border-radius: 12px;
+background: #65558F;
+border: none;
+text-align: center;
+    /* cursor: pointer; */
+
+}
+#texto-perfil{
+    display: flex;
+    width: 127px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    /* cursor: pointer; */
+    text-align: center;
+}
+
+
+.fila-botones-perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-left: 23px;
+    margin-top: 20px;
+}
+
+.seguidores-seguidos {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-seguidos,
+.btn-seguidores {
+    background: #65558F;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 14px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    height: 36px;
+}
+
+.instrumento-biografia button {
+    width: 180px; /* antes era 245px o 217px */
+    margin-left: 0;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    gap: 10px;
+}
+#texto-instrumento {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.instrumento-actual {
+    color: #000;
+    margin-left: 25px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.instrumento-biografia {
+    display: flex;
+    margin-left: 25px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+.biografia {
+    display: inline-flex;
+    padding: 0px 0px 45px 18px;
+    width: 60%;margin-left: 25px;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 12px;
+    background: #F7E9DE;
+    height: auto;
+}
+.biografia ::placeholder{
+    display: flex;
+    width: 427px;
+    height: 89px;
+    flex-direction: column;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.60);
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    opacity: 0.9;
+}
+
+.biografia:focus::placeholder {
+    color: transparent;
+}
+
+.tecnicas {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0px 25px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background: #ffebd9;
+    margin-left: 10px;
+    width: calc(100% - 10px);
+    height: auto;
+    flex-shrink: 0;
+}
+
+.tecnicas h3 {
+    display: flex;
+    width: 122px;
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #000;
+    font-size: 22px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-weight: 400;
+    line-height: normal;
+}
+.grupo-etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.etiqueta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 12px;
+    background: #FFF;
+    white-space: nowrap;
+}
+
+
+.etiqueta.btn-anadir,
+.etiqueta.btn-ver-mas-perfil {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    user-select: auto;
+}
+
+.etiqueta.btn-anadir:hover,
+.etiqueta.btn-ver-mas-perfil:hover {
+    background-color: black;
+}
+/* .oculta {
+    display: none;
+} */
+
+.publicaciones {
+    display: flex;
+    gap: 5px;
+    padding: 0px 25px;
+flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background: #ffebd9;
+    margin-left: 10px;
+    width: calc(100% - 10px);
+    height: 100%;
+    flex-shrink: 0;
+    /*width: 647px;
+    height: 428px;
+    flex-shrink: 0;
+    background: yellow;*/
+}
+.publicaciones h3 {
+    margin: 0;
+    padding-top: 20px;
+}
+.grid-videos {
+    display: grid;
+    position: initial;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta a columnas flexibles */
+    gap: 5px;
+    margin-top: 0px;
+    width: 100%;
+     margin: 0;
+    padding: 0;
+}
+
+.video-miniatura {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Relación común para videos */
+    border-radius: 6px;
+    overflow: hidden;
+    background: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-miniatura video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+
+.video-miniatura.subir-video {
+    background-color: #000;
+    cursor: pointer;
+    height: 50px;  
+    width: 100%;
+    aspect-ratio: auto;
+}
+
+.icono-subir {
+    font-size: 20px;  
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal.oculto {
+    display: none;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.modal-contenido h3 {
+    margin-top: 0;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-contenido textarea {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    padding: 10px;
+    resize: vertical;
+}
+
+.modal-contenido button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#lista-usuarios {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+#lista-usuarios li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+.oculto {
+  display: none;
+}

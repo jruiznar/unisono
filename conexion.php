@@ -1,8 +1,6 @@
-<?php
-// Mostrar errores
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-?>
+  <?php 
+
+// ?> 
 <?php
 $servername = "localhost";
 $username = "root";

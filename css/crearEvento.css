@@ -1,0 +1,338 @@
+/* Contenedor general */
+.crear-evento-container {
+ padding-left: 60px; 
+    margin-left: 10px; 
+
+  background: #ffebd9; 
+  min-height: 100vh; /* ocupa toda la altura visible */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* separación entre secciones */
+}
+
+.datos {
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Imagen lado izquierdo */
+.datos img, .imagen-evento {
+  width: 190px;
+height: 100%;
+flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: cover;
+}
+#nombreCreador {
+  display: flex;
+  width: 350px;
+  height: 38px;
+  padding: 0px 16px 0px 4px;
+  align-items: center;
+  border-radius: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: var(--Schemes-Surface-Container, #F3EDF7);
+  margin-bottom: 20px;
+  color: #000;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#nombreEvento {
+  display: flex;
+  width: 350px;
+  height: 38px;
+  padding: 0px 16px 0px 4px;
+  align-items: center;
+  gap: 276px; 
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc; 
+  font-size: 1rem;
+  background: var(--Schemes-Surface-Container, #F3EDF7);
+  margin-bottom: 20px;
+  color: #000;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#ubicacionEvento {
+  width: 350px;
+  height: 113px;
+  padding: 8px 16px 0 40px; /* padding izquierdo para icono */
+  border-radius: 12px;
+  background: var(--Schemes-Surface-Container, #F3EDF7);
+  background-image: url('/unisono/iconos/ubi.png');
+  background-repeat: no-repeat;
+  background-position: 12px 8px;
+  background-size: 20px 20px;
+  box-sizing: border-box;
+  resize: vertical; 
+  font-family: inherit;
+  font-size: 1rem;
+  vertical-align: top; /* importante para textarea */
+  margin-bottom: 20px;
+
+  color: #000;
+font-family: Inter;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+#fechaEvento, #horaEvento {
+  display: flex;
+  width: 350px;
+  height: 38px;
+  padding: 0 16px 0 4px;
+  align-items: center; 
+  gap: 276px; 
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--Schemes-Surface-Container, #F3EDF7);
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1rem;
+  cursor: pointer;
+
+  color: #000;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  
+}
+
+.inputs-datos input[type="date"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+/* Descripción */
+.descripcion {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.descripcion label {
+  display: flex;
+  width: 144px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #000;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.descripcion textarea {
+display: flex;
+width: 555px;
+height: 337px;
+padding: 0px 16px 0px 4px;
+align-items: center;
+gap: 276px;
+margin-bottom: 20px;
+
+border-radius: 12px;
+background: var(--Schemes-Surface-Container, #F3EDF7);
+}
+
+
+
+/* Botones: crear y añadir invitados */
+.botones {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+/* Estilo base para ambos botones */
+.botones button {
+  display: flex;
+  height: 39px;
+  padding: 0px 16px 0px 4px;
+  align-items: center;
+  gap: 276px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+/* Botón Guardar */
+.crear-btn {
+  width: 136px;
+  background: var(--Schemes-Shadow, #000);
+}
+
+/* Botón Añadir Invitado */
+.invitados-btn {
+  width: 325px;
+  background: var(--Schemes-Scrim, #000);
+}
+
+.borrar-btn {
+  width: 325px;
+  background: var(--Schemes-Scrim, #000);
+}
+/* Hover */
+.botones button:hover {
+  filter: brightness(0.85);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.modal .cerrar {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* .modal.mostrar {
+  display: flex !important;
+} */
+
+.modal.oculto {
+  display: none;
+}
+.modal.mostrar {
+  display: flex;
+}
+ul, ol {
+  list-style: none; /* elimina bullets y números */
+  padding-left: 0;  /* opcional: elimina la sangría */
+  margin-left: 0;   /* opcional: elimina margen si es necesario */
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modal.mostrar {
+  display: flex;
+}
+.modal-contenido {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  max-width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.cerrar {
+  cursor: pointer;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* .imagen-evento {
+  max-width: 200px;
+  max-height: 150px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+} */

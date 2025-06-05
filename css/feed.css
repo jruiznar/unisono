@@ -1,0 +1,233 @@
+/* Estructura general del feed */
+.feed {
+    
+     padding-left: 40px; 
+     padding-right: 40px;
+    margin-left: 10px; 
+
+  background: #ffebd9; 
+  min-height: 100vh; /* ocupa toda la altura visible */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* separación entre secciones */
+}
+
+.post {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+}
+
+/* Información del usuario */
+.usuario-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.foto-feed {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 133px;
+    object-fit: cover;
+    margin-right: 0.5rem;
+}
+
+
+
+.nombre-usuario {
+    display: flex;
+    width: 208px;
+    height: 32px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+/* Video */
+.video-contenido video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    object-fit: cover;
+      display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* Descripción del video */
+.descripcion-video {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* Acciones: comentarios y formulario */
+.acciones {
+    margin-top: 0.5rem;
+}
+
+.form-comentario {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.form-comentario input[type="text"] {
+    flex: 1;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    display: flex;
+    width: 552px;
+    height: 27px;
+    align-items: center;
+    gap: 276px;
+    border-radius: 12px;
+    background: var(--Schemes-Surface-Container, #F3EDF7);
+    font-size: 14px;
+    outline: none;
+
+}
+
+
+.form-comentario button:hover {
+    background-color: #FFC38F;
+}
+
+/* Comentarios: contenedor dinámico */
+.comentarios-container {
+    display: visible;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.comentarios-container.visible {
+    display: block;
+}
+
+/* Lista de comentarios */
+.lista-comentarios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-comentarios li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.lista-comentarios li strong {
+    color: #333;
+}
+
+
+
+.btn-comentarios:hover {
+    text-decoration: underline;
+        background-color: #FFC38F;
+
+}
+
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 1rem;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+}
+.comentario-foto {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.lista-comentarios li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.comentario-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.form-comentario {
+    display: flex;
+    flex: 1;
+    gap: 0.5rem;
+    margin: 0; 
+}
+
+.form-comentario input[type="text"] {
+    flex: 1;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.btn-comentarios {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.icono-comentario {
+    width: 24px;
+    height: 24px;
+}
+.btn-enviar {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.icono-enviar {
+    width: 24px;
+    height: 24px;
+}
+
+.usuario-info a {
+    text-decoration: none; /* quita el subrayado */
+    color: inherit;        /* hereda el color del texto del contenedor */
+}

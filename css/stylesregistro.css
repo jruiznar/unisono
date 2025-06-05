@@ -11,25 +11,34 @@ body {
 
 .container {
   display: flex;
+  flex-wrap: nowrap; /* <-- Forzamos a que no se envuelvan */
   justify-content: space-between;
   width: 100%;
-  height: auto;
-  margin: 1.5cm;
+  max-width: 1200px;
+  margin: 1.5cm auto;
+  position: relative;
 }
+
+
 
 .left-section {
   width: 50%;
   position: relative;
   padding: 20px;
+  z-index: 1; 
 }
+
 
 .right-section {
   width: 50%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center; /* Mejor centrado */
   align-items: flex-start;
   padding: 20px;
+  position: relative;
+  z-index: 2; /* Encima de left-section */
 }
+
 
 .login-banner {
   width: 460px;
@@ -52,28 +61,35 @@ body {
 }
 
 .img-left {
-  width: 180px;
-  height: 120px;
+  width: 200px;
+  height: 140px;
   margin-top: -1cm;
+    margin-left: 20px; 
+
 }
 
 .img-right {
-  width: 180px;
+  width: 200px;
   margin-top: 5px;
-  margin-left: 230px;
-  height: 120px;
+  margin-left: 240px; 
+  height: 140px;
+  display: block;
 }
+
 
 .form-container {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 12px;
   padding: 30px;
   padding-bottom: 40px;
-  width: 100%;
-  max-width: 900px;
-  margin-left: -6cm;
-  margin-bottom: 40px; 
+  width: 100%; 
+  max-width: none; 
+  margin: 0; 
+  z-index: 2;
+  position: relative;
 }
+
+
 
 .form-container h2 {
   font-size: 24px;

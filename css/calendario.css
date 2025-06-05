@@ -1,0 +1,19 @@
+.calendario-dias .dia-normal.rojo {
+  background-color: #ff4d4d !important;
+  color: white !important;
+  border-radius: 50% !important;
+}
+.calendario-dias .dia-normal.amarillo {
+  background-color: #ffe066 !important;
+  color: black !important;
+  border-radius: 50% !important;
+}
+.evento-creado {
+  background-color: #f8d7da; 
+  color: #721c24;
+}
+
+.evento-invitado {
+  background-color: #fff3cd; 
+  color: #856404;
+}

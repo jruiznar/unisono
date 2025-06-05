@@ -1,0 +1,172 @@
+.resultados-busqueda {
+  padding-left: 40px; 
+  margin-left: 10px; 
+  background: #ffebd9; 
+  min-height: 100vh; /* ocupa toda la altura visible */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* separación entre secciones */
+}
+
+.titulo-resultados {
+  display: flex;
+  width: 614px;
+  height: 49px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 1px; /* reduce el espacio debajo del título */
+}
+
+.filtros-resultados {
+  margin-top: 0; 
+  margin-bottom: 10px; 
+}
+.checkbox-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.checkbox-custom input {
+  display: none;
+}
+
+.checkbox-custom .checkmark {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path d="M5 21C4.45 21 3.979 20.804 3.588 20.412C3.196 20.021 3 19.55 3 19V5C3 4.45 3.196 3.979 3.588 3.588C3.979 3.196 4.45 3 5 3H19C19.55 3 20.021 3.196 20.412 3.588C20.804 3.979 21 4.45 21 5V19C21 19.55 20.804 20.021 20.412 20.412C20.021 20.804 19.55 21 19 21H5Z" fill="%231D1B20"/></svg>');
+}
+
+.checkbox-custom input:checked + .checkmark {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path d="M10.6 16.2L17.65 9.15L16.25 7.75L10.6 13.4L7.75 10.55L6.35 11.95L10.6 16.2ZM5 21C4.45 21 3.979 20.804 3.588 20.412C3.196 20.021 3 19.55 3 19V5C3 4.45 3.196 3.979 3.588 3.588C3.979 3.196 4.45 3 5 3H19C19.55 3 20.021 3.196 20.412 3.588C20.804 3.979 21 4.45 21 5V19C21 19.55 20.804 20.021 20.412 20.412C20.021 20.804 19.55 21 19 21H5Z" fill="%231D1B20"/></svg>');
+}
+.foto-perfil {
+    width: 101px;
+    height: 101px;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+    border-radius: 133px;
+    object-fit: cover;
+    background-color: lightgray; /* En caso de que la imagen no cargue */
+}
+.nombre-localidad {
+    display: flex;
+    width: 291px;
+    height: 75px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.lista-usuarios,
+.lista-eventos {
+  list-style: none;
+  padding-left: 0; 
+  margin-left: 0;  
+}
+
+.usuario-item, .evento-item {
+  margin-bottom: 30px; 
+}
+
+.usuario-item a {
+  display: flex;
+  align-items: flex-start; /* alinea la info respecto a la foto */
+  gap: 15px; /* espacio entre foto e info */
+  text-decoration: none;
+  color: inherit;
+}
+
+.info-usuario {
+  display: flex;
+  flex-direction: column;
+}
+
+.nombre-localidad {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #000;
+  line-height: 0.1; 
+
+}
+.profesional {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 0px;
+  line-height: 0.1; 
+
+}
+
+.lista-eventos {
+  list-style: none;
+  padding: 0;
+}
+
+.evento-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+  align-items: flex-start;
+}
+
+.foto-evento {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.info-evento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.titulo-evento {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.fecha-hora,
+.ubicacion-evento,
+.creador-evento {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+.descripcion-evento {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #333;
+}

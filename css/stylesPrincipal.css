@@ -6,6 +6,7 @@ body, html {
   margin: 0; padding: 0; height: 100%;
   background: white; /* fondo blanco para los espacios */
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .contenedor-general {
@@ -17,6 +18,7 @@ body, html {
   grid-template-rows: 60px 1fr;
   height: 100vh;
   background: white;
+  overflow-x:hidden ;
 }
 
 
@@ -28,13 +30,11 @@ body, html {
     height: 80px;
     background: #FFC38F;
     z-index: 100;
-    padding: 0 10px; 
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px; 
-
 }
 
         .logo {
@@ -50,7 +50,6 @@ body, html {
                 flex-shrink: 0;
                 aspect-ratio: 289/80;
                 border-radius: 0px 22px 22px 0px;
-                background: url(<path-to-image>) lightgray 50% / cover no-repeat;
                 }
 
         .busqueda {
@@ -325,8 +324,11 @@ body, html {
         align-items: center;
         justify-content: center;
         font-size: 14px;
+        
         }
-
+.calendario-dias, .dia-normal:hover {
+  cursor: pointer;
+}
 
 .derecha-container {
   position: fixed;
@@ -337,7 +339,7 @@ body, html {
   background: #FFC38F;
   padding: 15px;
   box-sizing: border-box;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .central-container {
@@ -352,5 +354,142 @@ background: white;
 
   box-sizing: border-box;
     overflow-y: auto; /* scroll */
+}
+
+
+.evento-creado {
+  background-color: #f8d7da; 
+  color: #721c24;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.evento-invitado {
+  background-color: #fff3cd; 
+  color: #856404;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.evento-creado img,
+.evento-invitado img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.evento-creado button,
+.evento-invitado button {
+  margin-left: auto;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+}
+
+
+.modal.oculto {
+    display: none;
+}
+.modal.mostrar {
+    display: block;
+}
+    .btn-chat, .btn-ver-mas {
+        margin-top: 70px;  
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        background: var(--Schemes-Scrim, #000);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        margin-bottom: 12px;
+        transition: background-color 0.3s ease;
+    }
+    .btn-chat, .btn-ver-mas:hover {
+  filter: brightness(0.85);
+    }
+
+
+ .lista-usuarios {
+    max-height: 600px; /* Aumentás el tamaño visible */
+    overflow-y: auto; /* Aparece scroll solo si se necesita */
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    padding-bottom: 10px; /* Un poco de espacio extra para que el botón no quede pegado abajo */
+}
+
+    .lista-usuarios h3 {
+        margin-bottom: 8px;
+        font-size: 1.2rem;
+        color: black;
+    }
+    .lista-usuarios ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+    .lista-usuarios li {
+        border-bottom: 1px solid #ddd;
+        padding: 8px 4px;
+    }
+    .lista-usuarios li strong {
+        font-weight: 600;
+    }
+    .lista-usuarios li small {
+        color: #666;
+    }
+
+.usuario-sugerido {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.usuario-sugerido a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.foto-mini {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.info-usuario {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.oculta {
+    display: none;
+}
+
+.btn-ver-mas {
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
 }
 

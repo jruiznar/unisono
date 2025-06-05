@@ -19,11 +19,14 @@ session_destroy(); // Cierra cualquier sesión anterior
 
       <section class="login-container">
         <form class="login-form" method="POST" action="login.php">
+
+        <!-- Campo de nombre de usuario -->
           <div class="form-group">
             <img class="logouser" src="./iconos/User.png" alt="Icono usuario" />
             <input type="text" name="nombre_usuario" placeholder="Usuario" required />
           </div>
 
+                    <!-- Campo de contraseña -->
           <div class="form-group">
             <img class="logokey" src="./iconos/Key.png" alt="Icono contraseña" />
             <input type="password" name="pass" placeholder="Contraseña" required />
@@ -37,5 +40,16 @@ session_destroy(); // Cierra cualquier sesión anterior
       </section>
     </div>
   </div>
+
+  <script>
+  const urlParams = new URLSearchParams(window.location.search);// Obtiene parámetros de la URL para alert
+  const error = urlParams.get('error');// Extrae el parámetro 'error'
+  if (error === 'pass') {
+    alert('Contraseña incorrecta.');
+  } else if (error === 'user') {
+    alert('El usuario no existe.');
+  } 
+</script>
+
 </body>
 </html>
